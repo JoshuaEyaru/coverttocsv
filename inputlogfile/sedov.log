@@ -1,0 +1,829 @@
+ FLASH log file:  05-05-2023  22:51:19.137    Run number:  1
+ ==============================================================================
+ Number of MPI tasks:                  4
+ MPI version:                          4
+ MPI subversion:                       0
+ Dimensionality:                       2
+ Max Number of Blocks/Proc:         1000
+ Number x zones:                       8
+ Number y zones:                       8
+ Number z zones:                       1
+ Setup stamp:     Fri May 5 22:51:01 2023
+ Build stamp:     Fri May 5 22:51:04 2023
+ System info:     Linux compute-386-04 5.4.0-99-generic #112-Ubuntu SMP Thu Feb 3 13:50:55 UTC 202
+ Version:         Flash-X 1.0 (remotes/origin/staged-0-g3743915b)                                 
+ Build directory: /scratch/jenkins-slave/workspace/Flash-X-staged_GCC/object
+ Setup syntax:    /scratch/jenkins-slave/workspace/Flash-X-staged_GCC/bin/setup.py Sedov -site=gce -auto -debug -2d -nxb=8 -nyb=8 +sHLL +milhoja +serialio -unit=IO/IOMain/hdf5/serial/MH -index-reorder --with-unofficial=Grid/GridMain/AMR/Milhoja
+ f compiler flags: h5pfc -I/nfs/gce/projects/FLASH5/FlashXTestEnv/gce/software/spack/opt/spack/linux-ubuntu20.04-skylake_avx512/gcc-11.1.0/amrex-22.10-vheq45ta6rzlifwnw4ouadnyi3hsdtw4/include -DHAVE_MPI_MODULE -I/nfs/gce/projects/FLASH5/FlashXTestEnv/gce/software/custom/linux-ubuntu20.04-skylake/gcc_11.1.0/milhoja/2d/f613da66/include -fexceptions -ggdb -c -O0 -fdefault-real-8 -fdefault-double-8 -Wall -Wextra -Wno-un
+ c compiler flags:    h5pcc -I/nfs/gce/projects/FLASH5/FlashXTestEnv/gce/software/spack/opt/spack/linux-ubuntu20.04-skylake_avx512/gcc-11.1.0/amrex-22.10-vheq45ta6rzlifwnw4ouadnyi3hsdtw4/include -DH5_USE_18_API -I/include -ggdb -c -O0 -Wno-div-by-zero -Wundef -Wconversion -Wstrict-prototypes -Wunreachable-code -Wall -Wextra -Winit-self -ftree-vrp -Wfloat-equal -Wunsafe-loop-optimizations -Wpadded -fstack-protector-all
+ ==============================================================================
+ Comment:  Sedov explosion
+ ==============================================================================
+ FLASH Units used:
+   Driver/DriverMain/Unsplit
+   Grid/GridBoundaryConditions/Milhoja
+   Grid/GridMain/AMR/Milhoja
+   Grid/localAPI
+   IO/IOMain/hdf5/MH
+   IO/IOMain/hdf5/serial/MH
+   IO/localAPI
+   Multispecies
+   Particles
+   PhysicalConstants/PhysicalConstantsMain
+   RuntimeParameters/RuntimeParametersMain
+   Simulation/SimulationMain/Sedov
+   flashUtilities/contiguousConversion
+   flashUtilities/general
+   flashUtilities/interpolation/oneDim
+   flashUtilities/nameValueLL
+   flashUtilities/system/memoryUsage/legacy
+   monitors/Debugger
+   monitors/Logfile/LogfileMain
+   monitors/Profiler
+   monitors/Timers/TimersMain/MPINative
+   numericalTools/Interpolate
+   numericalTools/MoL
+   numericalTools/Roots
+   numericalTools/RungeKutta
+   numericalTools/Stencils
+   physics/Eos/EosMain/Gamma
+   physics/Gravity
+   physics/HeatAD
+   physics/Hydro/HydroMain/simpleUnsplit/HLL
+   physics/Hydro/HydroMain/simpleUnsplit/levelFlux
+   physics/Hydro/localAPI
+   physics/ImBound
+   physics/IncompNS
+   physics/Multiphase
+   physics/RadTrans
+   physics/sourceTerms/Burn
+   physics/sourceTerms/Deleptonize
+ ==============================================================================
+ RuntimeParameters:
+                                                                               
+ ==============================================================================
+bndpriorityone              =          1
+bndprioritythree            =          3
+bndprioritytwo              =          2
+checkpointfileintervalstep  =          0
+checkpointfilenumber        =          0
+dr_abortpause               =          2
+dr_dtminbelowaction         =          1
+drift_break_inst            =          0
+drift_trunc_mantissa        =          2
+drift_verbose_inst          =          0
+eos_entrelescalechoice      =          6
+eos_loglevel                =        700
+fileformatversion           =          9
+forcedplotfilenumber        =          0
+gr_lrefmaxtimevalue_1       =         -1
+gr_lrefmaxtimevalue_10      =         -1
+gr_lrefmaxtimevalue_11      =         -1
+gr_lrefmaxtimevalue_12      =         -1
+gr_lrefmaxtimevalue_13      =         -1
+gr_lrefmaxtimevalue_14      =         -1
+gr_lrefmaxtimevalue_15      =         -1
+gr_lrefmaxtimevalue_16      =         -1
+gr_lrefmaxtimevalue_17      =         -1
+gr_lrefmaxtimevalue_18      =         -1
+gr_lrefmaxtimevalue_19      =         -1
+gr_lrefmaxtimevalue_2       =         -1
+gr_lrefmaxtimevalue_20      =         -1
+gr_lrefmaxtimevalue_3       =         -1
+gr_lrefmaxtimevalue_4       =         -1
+gr_lrefmaxtimevalue_5       =         -1
+gr_lrefmaxtimevalue_6       =         -1
+gr_lrefmaxtimevalue_7       =         -1
+gr_lrefmaxtimevalue_8       =         -1
+gr_lrefmaxtimevalue_9       =         -1
+gr_restrictallmethod        =          3
+gr_tilesizex                =          8
+gr_tilesizey                =          8
+gr_tilesizez                =          1
+hy_3torder                  =         -1
+iprocs                      =          2 [CHANGED]
+interpol_order              =          2
+irenorm                     =          0
+jprocs                      =          2 [CHANGED]
+kprocs                      =          1
+lrefine_del                 =          0
+lrefine_max                 =          1
+lrefine_min                 =          1
+max_particles_per_blk       =        100
+memory_stat_freq            =     100000
+meshcopycount               =          1
+min_particles_per_blk       =          1
+nbegin                      =          1
+nblockx                     =         32 [CHANGED]
+nblocky                     =         32 [CHANGED]
+nblockz                     =          1
+nend                        =      10000 [CHANGED]
+nrefs                       =          2
+nsteptotalsts               =          5
+order                       =          3 [CHANGED]
+outputsplitnum              =          1
+plotfileintervalstep        =          0
+plotfilenumber              =          0
+refine_var_count            =          4
+rolling_checkpoint          =      10000
+sim_centerrefinelevel       =          1
+sim_integralslevel          =         -1
+sim_nsubzones               =          7
+sweeporder                  =        123
+transorder                  =          1
+wr_integrals_freq           =          1
+limitedslopebeta            =                 0.100E+01
+cfl                         =                 0.450E+00 [CHANGED]
+checkpointfileintervaltime  =                 0.000E+00 [CHANGED]
+checkpointfileintervalz     =                 0.180+309
+cvisc                       =                 0.100E+00
+derefine_cutoff_1           =                 0.200E+00
+derefine_cutoff_2           =                 0.200E+00
+derefine_cutoff_3           =                 0.200E+00
+derefine_cutoff_4           =                 0.200E+00
+dr_dtmincontinue            =                 0.000E+00
+dr_tstepslowstartfactor     =                 0.100E+00
+dtinit                      =                 0.100E-09
+dtmax                       =                 0.100E+06
+dtmin                       =                 0.100E-09
+eintswitch                  =                 0.100E-03 [CHANGED]
+eos_singlespeciesa          =                 0.100E+01
+eos_singlespeciesz          =                 0.100E+01
+gamma                       =                 0.140E+01 [CHANGED]
+gr_btworkchildscaling       =                 0.100E+01
+gr_btworkdefaultleaf        =                 0.200E+01
+gr_btworkdefaultpar         =                 0.100E+01
+gr_btworklbleaf             =                 0.000E+00
+gr_btworklbpar              =                 0.000E+00
+gr_btworkubleaf             =                 0.100E+07
+gr_btworkubpar              =                 0.100E+07
+gr_lrefinemaxredlogbase     =                 0.100E+02
+gr_lrefinemaxredradiusfact  =                 0.000E+00
+gr_lrefinemaxredtref        =                 0.000E+00
+gr_lrefinemaxredtimescale   =                 0.100E+01
+gr_lrefmaxtime_1            =                -0.100E+01
+gr_lrefmaxtime_10           =                -0.100E+01
+gr_lrefmaxtime_11           =                -0.100E+01
+gr_lrefmaxtime_12           =                -0.100E+01
+gr_lrefmaxtime_13           =                -0.100E+01
+gr_lrefmaxtime_14           =                -0.100E+01
+gr_lrefmaxtime_15           =                -0.100E+01
+gr_lrefmaxtime_16           =                -0.100E+01
+gr_lrefmaxtime_17           =                -0.100E+01
+gr_lrefmaxtime_18           =                -0.100E+01
+gr_lrefmaxtime_19           =                -0.100E+01
+gr_lrefmaxtime_2            =                -0.100E+01
+gr_lrefmaxtime_20           =                -0.100E+01
+gr_lrefmaxtime_3            =                -0.100E+01
+gr_lrefmaxtime_4            =                -0.100E+01
+gr_lrefmaxtime_5            =                -0.100E+01
+gr_lrefmaxtime_6            =                -0.100E+01
+gr_lrefmaxtime_7            =                -0.100E+01
+gr_lrefmaxtime_8            =                -0.100E+01
+gr_lrefmaxtime_9            =                -0.100E+01
+hybridorderkappa            =                 0.000E+00
+nusts                       =                 0.200E+00 [CHANGED]
+plotfileintervaltime        =                 0.000E+00 [CHANGED]
+plotfileintervalz           =                 0.180+309
+refine_cutoff_1             =                 0.800E+00
+refine_cutoff_2             =                 0.800E+00
+refine_cutoff_3             =                 0.800E+00
+refine_cutoff_4             =                 0.800E+00
+refine_filter_1             =                 0.100E-01
+refine_filter_2             =                 0.100E-01
+refine_filter_3             =                 0.100E-01
+refine_filter_4             =                 0.100E-01
+rss_limit                   =                -0.100E+01
+sim_derefineradius          =                 0.000E+00
+sim_earliestlstime          =                 0.000E+00
+sim_expenergy               =                 0.100E+01
+sim_largestnormradius       =                 0.180+309
+sim_latestlstime            =                 0.180+309
+sim_minrhoinit              =                 0.100E-19
+sim_pambient                =                 0.100E-04
+sim_rinit                   =                 0.137E-01 [CHANGED]
+sim_rhoambient              =                 0.100E+01
+sim_smallestnormradius      =                 0.000E+00
+sim_xctr                    =                 0.500E+00
+sim_yctr                    =                 0.500E+00
+sim_zctr                    =                 0.500E+00
+small                       =                 0.100E-09
+smalle                      =                 0.100E-09
+smallp                      =                 0.100E-09
+smallt                      =                 0.100E-09
+smallu                      =                 0.100E-09
+smallx                      =                 0.100E-09
+smlrho                      =                 0.100E-09
+tinitial                    =                 0.000E+00
+tiny                        =                 0.100E-15
+tmax                        =                 0.500E-01 [CHANGED]
+tstep_change_factor         =                 0.200E+01
+wall_clock_checkpoint       =                 0.432E+05
+wall_clock_time_limit       =                 0.605E+06
+x_refine_center             =                 0.000E+00
+xmax                        =                 0.100E+01
+xmin                        =                 0.000E+00
+y_refine_center             =                 0.000E+00
+ymax                        =                 0.100E+01
+ymin                        =                 0.000E+00
+zfinal                      =                 0.000E+00
+zinitial                    =                -0.100E+01
+z_refine_center             =                 0.000E+00
+zmax                        =                 0.100E+01
+zmin                        =                 0.000E+00
+riemannsolver               = HLL                            [CHANGED]
+unitsystem                  =                               
+amrexinterpolator           = CELL_CONSERVATIVE_LINEAR      
+basenm                      = flashx_                       
+entropyfixmethod            = HARTENHYMAN                   
+eosmode                     = dens_ie                       
+eosmodeinit                 = dens_ie                       
+geometry                    = cartesian                     
+grav_boundary_type          = isolated                      
+log_file                    = sedov.log                      [CHANGED]
+output_directory            =                               
+pc_unitsbase                = CGS                           
+plot_grid_var_1             = none                          
+plot_grid_var_10            = none                          
+plot_grid_var_11            = none                          
+plot_grid_var_12            = none                          
+plot_grid_var_2             = none                          
+plot_grid_var_3             = none                          
+plot_grid_var_4             = none                          
+plot_grid_var_5             = none                          
+plot_grid_var_6             = none                          
+plot_grid_var_7             = none                          
+plot_grid_var_8             = none                          
+plot_grid_var_9             = none                          
+plot_var_1                  = dens                           [CHANGED]
+plot_var_10                 = none                          
+plot_var_11                 = none                          
+plot_var_12                 = none                          
+plot_var_13                 = none                          
+plot_var_14                 = none                          
+plot_var_15                 = none                          
+plot_var_16                 = none                          
+plot_var_17                 = none                          
+plot_var_2                  = pres                           [CHANGED]
+plot_var_3                  = temp                           [CHANGED]
+plot_var_4                  = none                          
+plot_var_5                  = none                          
+plot_var_6                  = none                          
+plot_var_7                  = none                          
+plot_var_8                  = none                          
+plot_var_9                  = none                          
+prof_file                   = profile.dat                   
+refine_var_1                = dens                           [CHANGED]
+refine_var_2                = pres                           [CHANGED]
+refine_var_3                = none                          
+refine_var_4                = none                          
+run_comment                 = Sedov explosion                [CHANGED]
+run_number                  = 1                             
+sim_proffilename            = sedovSolutionModLong.dat       [CHANGED]
+slopelimiter                = mc                             [CHANGED]
+stats_file                  = flashx.dat                    
+xl_boundary_type            = periodic                      
+xr_boundary_type            = periodic                      
+yl_boundary_type            = periodic                      
+yr_boundary_type            = periodic                      
+zl_boundary_type            = periodic                      
+zr_boundary_type            = periodic                      
+csvsummaryallprocs          =  F
+eosforriemann               =  F
+logsummaryallprocs          =  F
+addthermalflux              =  F
+allowdtstsdominate          =  F
+alwayscomputeuservars       =  T
+alwaysrestrictcheckpoint    =  T
+charlimiting                =  T
+chkguardcellsinput          =  F
+chkguardcellsoutput         =  F
+conserveangmom              =  F
+converttoconsvdformeshcalls =  F
+converttoconsvdinmeshinterp =  F [CHANGED]
+corners                     =  F
+dr_printtsteploc            =  T
+dr_shortenlaststepbeforetmax =  F
+drift_tuples                =  F
+eachprocwritesownabortlog   =  F
+eachprocwritessummary       =  F
+earlyblockdistadjustment    =  T
+entropy                     =  F
+flux_correct                =  F [CHANGED]
+flux_correct_perlevel       =  F
+geometryoverride            =  F
+gr_bcenableapplymixedgds    =  T
+gr_bndgcfillneedsprimitivevars =  T
+gr_btcustomwork             =  F
+gr_btexchangework           =  F
+gr_btsortbywork             =  T
+gr_enabletiling             =  F
+gr_lrefinemaxbytime         =  F
+gr_lrefinemaxreddobylogr    =  F
+gr_lrefinemaxreddobytime    =  F
+gr_usetiling                =  F
+hy_usetiling                =  F
+ignoreforcedplot            =  F
+io_writemscalarintegrals    =  F
+plotfilegridquantitydp      =  F
+plotfilemetadatadp          =  F
+reducegcellfills            =  F
+refine_on_particle_count    =  F
+restart                     =  F
+shockdetect                 =  F
+sim_bcsetbdryvar            =  F
+sim_forcecenterderefine     =  F
+sim_onelevelintegralsonly   =  F
+summaryoutputonly           =  F
+threadblocklistbuild        =  F
+threaddelepblocklist        =  F
+threaddelepwithinblock      =  F
+threaddriverblocklist       =  F
+threaddriverwithinblock     =  F
+threadeoswithinblock        =  F
+threadhydroblocklist        =  F
+threadhydrowithinblock      =  F
+threadraytracebuild         =  F
+threadwithinblockbuild      =  F
+tmr_suppressinparallel      =  F
+typematchedxfer             =  T
+unbiased_geometry           =  F
+updatehydrofluxes           =  T
+useburn                     =  F
+usecollectivehdf5           =  T
+usedeleptonize              =  F
+usegravity                  =  F
+useheatad                   =  F
+usehydro                    =  T
+useimbound                  =  F
+useincompns                 =  F
+uselegacylabels             =  T
+usemultiphase               =  F
+useparticles                =  F
+useradtrans                 =  F
+usests                      =  F
+usestsfordiffusion          =  F
+use_3dfullctu               =  T
+use_gravpotupdate           =  F
+use_avisc                   =  T [CHANGED]
+use_cma_advection           =  F
+use_cma_flattening          =  F
+use_flattening              =  F
+use_gravconsv               =  F
+use_gravhalfupdate          =  F
+use_hybridorder             =  F
+use_steepening              =  F
+use_upwindtvd               =  F
+writestatsummary            =  T
+                                                                               
+ ==============================================================================
+                                                                               
+ WARNING: Ignored Parameters :
+ These parameters were found in the flash.par file, but they were
+ not declared in any Config file for the simulation!
+                                                                               
+ iGridSize
+ jGridSize
+ kGridSize
+                                                                               
+ ==============================================================================
+                                                                               
+ Known units of measurement:
+                                                                               
+              Unit                          CGS Value                Base Unit
+  1                  cm                     1.0000                           cm
+  2                   s                     1.0000                            s
+  3                   g                     1.0000                            g
+  4                   K                     1.0000                            K
+  5                 esu                     1.0000                          esu
+  6                 mol                     1.0000                          mol
+  7                   m                     100.00                           cm
+  8                  km                    1.00000E+05                       cm
+  9                  pc                    3.08568E+18                       cm
+ 10                 kpc                    3.08568E+21                       cm
+ 11                 Mpc                    3.08568E+24                       cm
+ 12                 Gpc                    3.08568E+27                       cm
+ 13                Rsun                    6.96000E+10                       cm
+ 14                  AU                    1.49598E+13                       cm
+ 15                  yr                    3.15569E+07                        s
+ 16                 Myr                    3.15569E+13                        s
+ 17                 Gyr                    3.15569E+16                        s
+ 18                  kg                     1000.0                            g
+ 19                Msun                    1.98892E+33                        g
+ 20                 amu                    1.66054E-24                        g
+ 21                  eV                     11605.                            K
+ 22                   C                    2.99792E+09                      esu
+ 23                LFLY                    3.08568E+24                       cm
+ 24                TFLY                    2.05759E+17                        s
+ 25                MFLY                    9.88470E+45                        g
+ 26            clLength                    3.08568E+24                       cm
+ 27              clTime                    3.15569E+16                        s
+ 28              clMass                    1.98892E+48                        g
+ 29              clTemp                    1.16045E+07                        K
+-----------End of Units--------------------
+                                                                               
+ Known physical constants:
+                                                                               
+    Constant Name       Constant Value   cm       s        g        K        esu      mol
+  1              Newton    6.67408E-08   3.0     -2.0     -1.0      0.0      0.0      0.0    
+  2      speed of light    2.99792E+10   1.0     -1.0      0.0      0.0      0.0      0.0    
+  3              Planck    6.62607E-27   2.0     -1.0      1.0      0.0      0.0      0.0    
+  4     electron charge    4.80320E-10   0.0      0.0      0.0      0.0      1.0      0.0    
+  5       electron mass    9.10938E-28   0.0      0.0      1.0      0.0      0.0      0.0    
+  6         proton mass    1.67262E-24   0.0      0.0      1.0      0.0      0.0      0.0    
+  7      fine-structure    7.29735E-03   0.0      0.0      0.0      0.0      0.0      0.0    
+  8            Avogadro    6.02214E+23   0.0      0.0      0.0      0.0      0.0     -1.0    
+  9           Boltzmann    1.38065E-16   2.0     -2.0      1.0     -1.0      0.0      0.0    
+ 10  ideal gas constant    8.31446E+07   2.0     -2.0      1.0     -1.0      0.0     -1.0    
+ 11                Wien    0.28978       1.0      0.0      0.0      1.0      0.0      0.0    
+ 12    Stefan-Boltzmann    5.67037E-05   0.0     -3.0      1.0     -4.0      0.0      0.0    
+ 13  Radiation Constant    7.56572E-15  -1.0     -2.0      1.0     -4.0      0.0      0.0    
+ 14                  pi     3.1416       0.0      0.0      0.0      0.0      0.0      0.0    
+ 15                   e     2.7183       0.0      0.0      0.0      0.0      0.0      0.0    
+ 16               Euler    0.57722       0.0      0.0      0.0      0.0      0.0      0.0    
+ ==============================================================================
+                                                                               
+ Multifluid database: not configured in
+                                                                               
+ ==============================================================================
+ [ 05-05-2023  22:51:19.163 ] [gr_initGeometry] checking BCs for idir: 1
+ [ 05-05-2023  22:51:19.167 ] [gr_initGeometry] checking BCs for idir: 2
+ [ 05-05-2023  22:51:19.948 ] memory: /proc vsize    (MB):      120.68 (min)        120.70 (max)        120.68 (avg)
+ [ 05-05-2023  22:51:19.952 ] memory: /proc rss      (MB):       47.83 (min)         48.33 (max)         48.03 (avg)
+ [ 05-05-2023  22:51:19.958 ] memory: /proc vsize    (MB):      120.68 (min)        120.70 (max)        120.68 (avg)
+ [ 05-05-2023  22:51:19.962 ] memory: /proc rss      (MB):       47.83 (min)         48.33 (max)         48.03 (avg)
+ [ 05-05-2023  22:51:19.972 ] memory: /proc vsize    (MB):      120.80 (min)        120.83 (max)        120.81 (avg)
+ [ 05-05-2023  22:51:19.976 ] memory: /proc rss      (MB):       47.83 (min)         48.33 (max)         48.03 (avg)
+ [ 05-05-2023  22:51:19.997 ] [IO_writeCheckpoint] open: type=checkpoint name=flashx_hdf5_chk_0000
+ [ 05-05-2023  22:51:20.103 ] [IO_writeCheckpoint] close: type=checkpoint name=flashx_hdf5_chk_0000
+ [ 05-05-2023  22:51:20.113 ] [IO_writePlotfile] open: type=plotfile name=flashx_hdf5_plt_cnt_0000
+ [ 05-05-2023  22:51:20.154 ] [IO_writePlotfile] close: type=plotfile name=flashx_hdf5_plt_cnt_0000
+ [ 05-05-2023  22:51:20.158 ] memory: /proc vsize    (MB):      122.13 (min)        129.49 (max)        123.97 (avg)
+ [ 05-05-2023  22:51:20.161 ] memory: /proc rss      (MB):       49.97 (min)         54.73 (max)         51.21 (avg)
+ [ 05-05-2023  22:51:20.165 ] [Driver_evolveAll]: Entering evolution loop
+ [ 05-05-2023  22:51:20.169 ] step: n=1 t=0.000000E+00 dt=1.000000E-10
+ [ 05-05-2023  22:51:20.224 ] step: n=2 t=1.000000E-10 dt=2.000000E-10
+ [ 05-05-2023  22:51:20.274 ] step: n=3 t=3.000000E-10 dt=4.000000E-10
+ [ 05-05-2023  22:51:20.323 ] step: n=4 t=7.000000E-10 dt=8.000000E-10
+ [ 05-05-2023  22:51:20.372 ] step: n=5 t=1.500000E-09 dt=1.600000E-09
+ [ 05-05-2023  22:51:20.425 ] step: n=6 t=3.100000E-09 dt=3.200000E-09
+ [ 05-05-2023  22:51:20.476 ] step: n=7 t=6.300000E-09 dt=6.400000E-09
+ [ 05-05-2023  22:51:20.525 ] step: n=8 t=1.270000E-08 dt=1.280000E-08
+ [ 05-05-2023  22:51:20.574 ] step: n=9 t=2.550000E-08 dt=2.560000E-08
+ [ 05-05-2023  22:51:20.623 ] step: n=10 t=5.110000E-08 dt=5.120000E-08
+ [ 05-05-2023  22:51:20.674 ] step: n=11 t=1.023000E-07 dt=1.024000E-07
+ [ 05-05-2023  22:51:20.725 ] step: n=12 t=2.047000E-07 dt=2.048000E-07
+ [ 05-05-2023  22:51:20.776 ] step: n=13 t=4.095000E-07 dt=4.096000E-07
+ [ 05-05-2023  22:51:20.826 ] step: n=14 t=8.191000E-07 dt=8.192000E-07
+ [ 05-05-2023  22:51:20.877 ] step: n=15 t=1.638300E-06 dt=1.638400E-06
+ [ 05-05-2023  22:51:20.926 ] step: n=16 t=3.276700E-06 dt=3.276800E-06
+ [ 05-05-2023  22:51:20.977 ] step: n=17 t=6.553500E-06 dt=6.553600E-06
+ [ 05-05-2023  22:51:21.028 ] step: n=18 t=1.310710E-05 dt=1.310720E-05
+ [ 05-05-2023  22:51:21.078 ] step: n=19 t=2.621430E-05 dt=2.621440E-05
+ [ 05-05-2023  22:51:21.131 ] step: n=20 t=5.242870E-05 dt=5.242880E-05
+ [ 05-05-2023  22:51:21.183 ] step: n=21 t=1.048575E-04 dt=5.413404E-05
+ [ 05-05-2023  22:51:21.233 ] step: n=22 t=1.589915E-04 dt=5.260427E-05
+ [ 05-05-2023  22:51:21.283 ] step: n=23 t=2.115958E-04 dt=5.145977E-05
+ [ 05-05-2023  22:51:21.334 ] step: n=24 t=2.630556E-04 dt=5.076757E-05
+ [ 05-05-2023  22:51:21.384 ] step: n=25 t=3.138232E-04 dt=5.049462E-05
+ [ 05-05-2023  22:51:21.434 ] step: n=26 t=3.643178E-04 dt=5.070692E-05
+ [ 05-05-2023  22:51:21.483 ] step: n=27 t=4.150247E-04 dt=5.135718E-05
+ [ 05-05-2023  22:51:21.533 ] step: n=28 t=4.663819E-04 dt=5.196468E-05
+ [ 05-05-2023  22:51:21.584 ] step: n=29 t=5.183465E-04 dt=5.261476E-05
+ [ 05-05-2023  22:51:21.652 ] step: n=30 t=5.709613E-04 dt=5.356147E-05
+ [ 05-05-2023  22:51:21.730 ] step: n=31 t=6.245228E-04 dt=5.475178E-05
+ [ 05-05-2023  22:51:21.806 ] step: n=32 t=6.792746E-04 dt=5.614463E-05
+ [ 05-05-2023  22:51:21.860 ] step: n=33 t=7.354192E-04 dt=5.770863E-05
+ [ 05-05-2023  22:51:21.910 ] step: n=34 t=7.931278E-04 dt=5.941960E-05
+ [ 05-05-2023  22:51:21.959 ] step: n=35 t=8.525474E-04 dt=6.095821E-05
+ [ 05-05-2023  22:51:22.008 ] step: n=36 t=9.135056E-04 dt=6.259908E-05
+ [ 05-05-2023  22:51:22.057 ] step: n=37 t=9.761047E-04 dt=6.439005E-05
+ [ 05-05-2023  22:51:22.107 ] step: n=38 t=1.040495E-03 dt=6.631100E-05
+ [ 05-05-2023  22:51:22.157 ] step: n=39 t=1.106806E-03 dt=6.834470E-05
+ [ 05-05-2023  22:51:22.207 ] step: n=40 t=1.175150E-03 dt=7.047558E-05
+ [ 05-05-2023  22:51:22.257 ] step: n=41 t=1.245626E-03 dt=7.268909E-05
+ [ 05-05-2023  22:51:22.307 ] step: n=42 t=1.318315E-03 dt=7.497082E-05
+ [ 05-05-2023  22:51:22.356 ] step: n=43 t=1.393286E-03 dt=7.727314E-05
+ [ 05-05-2023  22:51:22.405 ] step: n=44 t=1.470559E-03 dt=7.951848E-05
+ [ 05-05-2023  22:51:22.455 ] step: n=45 t=1.550078E-03 dt=8.182282E-05
+ [ 05-05-2023  22:51:22.506 ] step: n=46 t=1.631900E-03 dt=8.416765E-05
+ [ 05-05-2023  22:51:22.555 ] step: n=47 t=1.716068E-03 dt=8.653563E-05
+ [ 05-05-2023  22:51:22.605 ] step: n=48 t=1.802604E-03 dt=8.890970E-05
+ [ 05-05-2023  22:51:22.657 ] step: n=49 t=1.891513E-03 dt=9.127328E-05
+ [ 05-05-2023  22:51:22.707 ] step: n=50 t=1.982787E-03 dt=9.361022E-05
+ [ 05-05-2023  22:51:22.757 ] step: n=51 t=2.076397E-03 dt=9.590514E-05
+ [ 05-05-2023  22:51:22.807 ] step: n=52 t=2.172302E-03 dt=9.810808E-05
+ [ 05-05-2023  22:51:22.856 ] step: n=53 t=2.270410E-03 dt=1.001342E-04
+ [ 05-05-2023  22:51:22.905 ] step: n=54 t=2.370544E-03 dt=1.020595E-04
+ [ 05-05-2023  22:51:22.954 ] step: n=55 t=2.472604E-03 dt=1.037260E-04
+ [ 05-05-2023  22:51:23.003 ] step: n=56 t=2.576330E-03 dt=1.052529E-04
+ [ 05-05-2023  22:51:23.051 ] step: n=57 t=2.681583E-03 dt=1.066741E-04
+ [ 05-05-2023  22:51:23.101 ] step: n=58 t=2.788257E-03 dt=1.078799E-04
+ [ 05-05-2023  22:51:23.160 ] step: n=59 t=2.896137E-03 dt=1.090261E-04
+ [ 05-05-2023  22:51:23.209 ] step: n=60 t=3.005163E-03 dt=1.101236E-04
+ [ 05-05-2023  22:51:23.258 ] step: n=61 t=3.115286E-03 dt=1.111825E-04
+ [ 05-05-2023  22:51:23.307 ] step: n=62 t=3.226469E-03 dt=1.122116E-04
+ [ 05-05-2023  22:51:23.355 ] step: n=63 t=3.338680E-03 dt=1.132181E-04
+ [ 05-05-2023  22:51:23.404 ] step: n=64 t=3.451899E-03 dt=1.142083E-04
+ [ 05-05-2023  22:51:23.453 ] step: n=65 t=3.566107E-03 dt=1.151868E-04
+ [ 05-05-2023  22:51:23.502 ] step: n=66 t=3.681294E-03 dt=1.161573E-04
+ [ 05-05-2023  22:51:23.551 ] step: n=67 t=3.797451E-03 dt=1.171224E-04
+ [ 05-05-2023  22:51:23.600 ] step: n=68 t=3.914573E-03 dt=1.180840E-04
+ [ 05-05-2023  22:51:23.650 ] step: n=69 t=4.032657E-03 dt=1.190432E-04
+ [ 05-05-2023  22:51:23.701 ] step: n=70 t=4.151700E-03 dt=1.200006E-04
+ [ 05-05-2023  22:51:23.750 ] step: n=71 t=4.271701E-03 dt=1.209565E-04
+ [ 05-05-2023  22:51:23.799 ] step: n=72 t=4.392657E-03 dt=1.219107E-04
+ [ 05-05-2023  22:51:23.848 ] step: n=73 t=4.514568E-03 dt=1.228632E-04
+ [ 05-05-2023  22:51:23.897 ] step: n=74 t=4.637431E-03 dt=1.238135E-04
+ [ 05-05-2023  22:51:23.947 ] step: n=75 t=4.761245E-03 dt=1.247611E-04
+ [ 05-05-2023  22:51:23.996 ] step: n=76 t=4.886006E-03 dt=1.257057E-04
+ [ 05-05-2023  22:51:24.045 ] step: n=77 t=5.011712E-03 dt=1.266466E-04
+ [ 05-05-2023  22:51:24.095 ] step: n=78 t=5.138358E-03 dt=1.275834E-04
+ [ 05-05-2023  22:51:24.147 ] step: n=79 t=5.265942E-03 dt=1.285158E-04
+ [ 05-05-2023  22:51:24.197 ] step: n=80 t=5.394458E-03 dt=1.294433E-04
+ [ 05-05-2023  22:51:24.246 ] step: n=81 t=5.523901E-03 dt=1.303655E-04
+ [ 05-05-2023  22:51:24.296 ] step: n=82 t=5.654266E-03 dt=1.312822E-04
+ [ 05-05-2023  22:51:24.345 ] step: n=83 t=5.785549E-03 dt=1.321931E-04
+ [ 05-05-2023  22:51:24.394 ] step: n=84 t=5.917742E-03 dt=1.330980E-04
+ [ 05-05-2023  22:51:24.446 ] step: n=85 t=6.050840E-03 dt=1.339967E-04
+ [ 05-05-2023  22:51:24.494 ] step: n=86 t=6.184836E-03 dt=1.348890E-04
+ [ 05-05-2023  22:51:24.543 ] step: n=87 t=6.319726E-03 dt=1.357749E-04
+ [ 05-05-2023  22:51:24.592 ] step: n=88 t=6.455500E-03 dt=1.366543E-04
+ [ 05-05-2023  22:51:24.641 ] step: n=89 t=6.592155E-03 dt=1.375271E-04
+ [ 05-05-2023  22:51:24.692 ] step: n=90 t=6.729682E-03 dt=1.383932E-04
+ [ 05-05-2023  22:51:24.743 ] step: n=91 t=6.868075E-03 dt=1.392528E-04
+ [ 05-05-2023  22:51:24.792 ] step: n=92 t=7.007328E-03 dt=1.401057E-04
+ [ 05-05-2023  22:51:24.840 ] step: n=93 t=7.147434E-03 dt=1.409520E-04
+ [ 05-05-2023  22:51:24.890 ] step: n=94 t=7.288386E-03 dt=1.417917E-04
+ [ 05-05-2023  22:51:24.939 ] step: n=95 t=7.430177E-03 dt=1.426249E-04
+ [ 05-05-2023  22:51:24.988 ] step: n=96 t=7.572802E-03 dt=1.434515E-04
+ [ 05-05-2023  22:51:25.037 ] step: n=97 t=7.716254E-03 dt=1.442718E-04
+ [ 05-05-2023  22:51:25.086 ] step: n=98 t=7.860525E-03 dt=1.450857E-04
+ [ 05-05-2023  22:51:25.135 ] step: n=99 t=8.005611E-03 dt=1.458932E-04
+ [ 05-05-2023  22:51:25.184 ] step: n=100 t=8.151504E-03 dt=1.466946E-04
+ [ 05-05-2023  22:51:25.235 ] step: n=101 t=8.298199E-03 dt=1.474898E-04
+ [ 05-05-2023  22:51:25.285 ] step: n=102 t=8.445689E-03 dt=1.482789E-04
+ [ 05-05-2023  22:51:25.335 ] step: n=103 t=8.593968E-03 dt=1.490620E-04
+ [ 05-05-2023  22:51:25.384 ] step: n=104 t=8.743030E-03 dt=1.498392E-04
+ [ 05-05-2023  22:51:25.434 ] step: n=105 t=8.892869E-03 dt=1.506106E-04
+ [ 05-05-2023  22:51:25.483 ] step: n=106 t=9.043479E-03 dt=1.513763E-04
+ [ 05-05-2023  22:51:25.533 ] step: n=107 t=9.194856E-03 dt=1.521363E-04
+ [ 05-05-2023  22:51:25.583 ] step: n=108 t=9.346992E-03 dt=1.528908E-04
+ [ 05-05-2023  22:51:25.632 ] step: n=109 t=9.499883E-03 dt=1.536398E-04
+ [ 05-05-2023  22:51:25.681 ] step: n=110 t=9.653523E-03 dt=1.543834E-04
+ [ 05-05-2023  22:51:25.733 ] step: n=111 t=9.807906E-03 dt=1.551217E-04
+ [ 05-05-2023  22:51:25.783 ] step: n=112 t=9.963028E-03 dt=1.558549E-04
+ [ 05-05-2023  22:51:25.832 ] step: n=113 t=1.011888E-02 dt=1.565829E-04
+ [ 05-05-2023  22:51:25.882 ] step: n=114 t=1.027547E-02 dt=1.573059E-04
+ [ 05-05-2023  22:51:25.931 ] step: n=115 t=1.043277E-02 dt=1.580240E-04
+ [ 05-05-2023  22:51:25.980 ] step: n=116 t=1.059080E-02 dt=1.587372E-04
+ [ 05-05-2023  22:51:26.031 ] step: n=117 t=1.074953E-02 dt=1.594456E-04
+ [ 05-05-2023  22:51:26.080 ] step: n=118 t=1.090898E-02 dt=1.601493E-04
+ [ 05-05-2023  22:51:26.131 ] step: n=119 t=1.106913E-02 dt=1.608485E-04
+ [ 05-05-2023  22:51:26.180 ] step: n=120 t=1.122998E-02 dt=1.615431E-04
+ [ 05-05-2023  22:51:26.230 ] step: n=121 t=1.139152E-02 dt=1.622332E-04
+ [ 05-05-2023  22:51:26.279 ] step: n=122 t=1.155375E-02 dt=1.629189E-04
+ [ 05-05-2023  22:51:26.328 ] step: n=123 t=1.171667E-02 dt=1.636004E-04
+ [ 05-05-2023  22:51:26.378 ] step: n=124 t=1.188027E-02 dt=1.642775E-04
+ [ 05-05-2023  22:51:26.427 ] step: n=125 t=1.204455E-02 dt=1.649505E-04
+ [ 05-05-2023  22:51:26.476 ] step: n=126 t=1.220950E-02 dt=1.656194E-04
+ [ 05-05-2023  22:51:26.525 ] step: n=127 t=1.237512E-02 dt=1.662843E-04
+ [ 05-05-2023  22:51:26.575 ] step: n=128 t=1.254140E-02 dt=1.669451E-04
+ [ 05-05-2023  22:51:26.624 ] step: n=129 t=1.270835E-02 dt=1.676020E-04
+ [ 05-05-2023  22:51:26.672 ] step: n=130 t=1.287595E-02 dt=1.682551E-04
+ [ 05-05-2023  22:51:26.721 ] step: n=131 t=1.304421E-02 dt=1.689043E-04
+ [ 05-05-2023  22:51:26.770 ] step: n=132 t=1.321311E-02 dt=1.695498E-04
+ [ 05-05-2023  22:51:26.821 ] step: n=133 t=1.338266E-02 dt=1.701915E-04
+ [ 05-05-2023  22:51:26.872 ] step: n=134 t=1.355285E-02 dt=1.708296E-04
+ [ 05-05-2023  22:51:26.922 ] step: n=135 t=1.372368E-02 dt=1.714641E-04
+ [ 05-05-2023  22:51:26.971 ] step: n=136 t=1.389514E-02 dt=1.720950E-04
+ [ 05-05-2023  22:51:27.021 ] step: n=137 t=1.406724E-02 dt=1.727223E-04
+ [ 05-05-2023  22:51:27.071 ] step: n=138 t=1.423996E-02 dt=1.733462E-04
+ [ 05-05-2023  22:51:27.120 ] step: n=139 t=1.441331E-02 dt=1.739667E-04
+ [ 05-05-2023  22:51:27.170 ] step: n=140 t=1.458727E-02 dt=1.745838E-04
+ [ 05-05-2023  22:51:27.220 ] step: n=141 t=1.476186E-02 dt=1.751975E-04
+ [ 05-05-2023  22:51:27.269 ] step: n=142 t=1.493706E-02 dt=1.758079E-04
+ [ 05-05-2023  22:51:27.319 ] step: n=143 t=1.511286E-02 dt=1.764150E-04
+ [ 05-05-2023  22:51:27.369 ] step: n=144 t=1.528928E-02 dt=1.770189E-04
+ [ 05-05-2023  22:51:27.420 ] step: n=145 t=1.546630E-02 dt=1.776196E-04
+ [ 05-05-2023  22:51:27.472 ] step: n=146 t=1.564392E-02 dt=1.782171E-04
+ [ 05-05-2023  22:51:27.522 ] step: n=147 t=1.582213E-02 dt=1.788116E-04
+ [ 05-05-2023  22:51:27.571 ] step: n=148 t=1.600095E-02 dt=1.794029E-04
+ [ 05-05-2023  22:51:27.622 ] step: n=149 t=1.618035E-02 dt=1.799912E-04
+ [ 05-05-2023  22:51:27.672 ] step: n=150 t=1.636034E-02 dt=1.805764E-04
+ [ 05-05-2023  22:51:27.722 ] step: n=151 t=1.654092E-02 dt=1.811587E-04
+ [ 05-05-2023  22:51:27.772 ] step: n=152 t=1.672208E-02 dt=1.817381E-04
+ [ 05-05-2023  22:51:27.822 ] step: n=153 t=1.690381E-02 dt=1.823145E-04
+ [ 05-05-2023  22:51:27.873 ] step: n=154 t=1.708613E-02 dt=1.828881E-04
+ [ 05-05-2023  22:51:27.923 ] step: n=155 t=1.726902E-02 dt=1.834588E-04
+ [ 05-05-2023  22:51:27.973 ] step: n=156 t=1.745247E-02 dt=1.840266E-04
+ [ 05-05-2023  22:51:28.023 ] step: n=157 t=1.763650E-02 dt=1.845917E-04
+ [ 05-05-2023  22:51:28.072 ] step: n=158 t=1.782109E-02 dt=1.851541E-04
+ [ 05-05-2023  22:51:28.122 ] step: n=159 t=1.800625E-02 dt=1.857137E-04
+ [ 05-05-2023  22:51:28.172 ] step: n=160 t=1.819196E-02 dt=1.862707E-04
+ [ 05-05-2023  22:51:28.222 ] step: n=161 t=1.837823E-02 dt=1.868250E-04
+ [ 05-05-2023  22:51:28.272 ] step: n=162 t=1.856506E-02 dt=1.873766E-04
+ [ 05-05-2023  22:51:28.325 ] step: n=163 t=1.875243E-02 dt=1.879257E-04
+ [ 05-05-2023  22:51:28.376 ] step: n=164 t=1.894036E-02 dt=1.884722E-04
+ [ 05-05-2023  22:51:28.427 ] step: n=165 t=1.912883E-02 dt=1.890162E-04
+ [ 05-05-2023  22:51:28.477 ] step: n=166 t=1.931785E-02 dt=1.895576E-04
+ [ 05-05-2023  22:51:28.530 ] step: n=167 t=1.950740E-02 dt=1.900966E-04
+ [ 05-05-2023  22:51:28.580 ] step: n=168 t=1.969750E-02 dt=1.906331E-04
+ [ 05-05-2023  22:51:28.630 ] step: n=169 t=1.988813E-02 dt=1.911672E-04
+ [ 05-05-2023  22:51:28.680 ] step: n=170 t=2.007930E-02 dt=1.916989E-04
+ [ 05-05-2023  22:51:28.730 ] step: n=171 t=2.027100E-02 dt=1.922283E-04
+ [ 05-05-2023  22:51:28.782 ] step: n=172 t=2.046323E-02 dt=1.927553E-04
+ [ 05-05-2023  22:51:28.832 ] step: n=173 t=2.065598E-02 dt=1.932800E-04
+ [ 05-05-2023  22:51:28.884 ] step: n=174 t=2.084926E-02 dt=1.938024E-04
+ [ 05-05-2023  22:51:28.934 ] step: n=175 t=2.104307E-02 dt=1.943226E-04
+ [ 05-05-2023  22:51:28.985 ] step: n=176 t=2.123739E-02 dt=1.948405E-04
+ [ 05-05-2023  22:51:29.037 ] step: n=177 t=2.143223E-02 dt=1.953562E-04
+ [ 05-05-2023  22:51:29.088 ] step: n=178 t=2.162759E-02 dt=1.958698E-04
+ [ 05-05-2023  22:51:29.141 ] step: n=179 t=2.182346E-02 dt=1.963811E-04
+ [ 05-05-2023  22:51:29.192 ] step: n=180 t=2.201984E-02 dt=1.968904E-04
+ [ 05-05-2023  22:51:29.243 ] step: n=181 t=2.221673E-02 dt=1.973975E-04
+ [ 05-05-2023  22:51:29.294 ] step: n=182 t=2.241412E-02 dt=1.979025E-04
+ [ 05-05-2023  22:51:29.344 ] step: n=183 t=2.261203E-02 dt=1.984055E-04
+ [ 05-05-2023  22:51:29.395 ] step: n=184 t=2.281043E-02 dt=1.989065E-04
+ [ 05-05-2023  22:51:29.445 ] step: n=185 t=2.300934E-02 dt=1.994054E-04
+ [ 05-05-2023  22:51:29.497 ] step: n=186 t=2.320874E-02 dt=1.999023E-04
+ [ 05-05-2023  22:51:29.547 ] step: n=187 t=2.340865E-02 dt=2.003972E-04
+ [ 05-05-2023  22:51:29.598 ] step: n=188 t=2.360904E-02 dt=2.008902E-04
+ [ 05-05-2023  22:51:29.649 ] step: n=189 t=2.380993E-02 dt=2.013813E-04
+ [ 05-05-2023  22:51:29.702 ] step: n=190 t=2.401132E-02 dt=2.018704E-04
+ [ 05-05-2023  22:51:29.755 ] step: n=191 t=2.421319E-02 dt=2.023577E-04
+ [ 05-05-2023  22:51:29.806 ] step: n=192 t=2.441554E-02 dt=2.028430E-04
+ [ 05-05-2023  22:51:29.855 ] step: n=193 t=2.461839E-02 dt=2.033265E-04
+ [ 05-05-2023  22:51:29.905 ] step: n=194 t=2.482171E-02 dt=2.038082E-04
+ [ 05-05-2023  22:51:29.955 ] step: n=195 t=2.502552E-02 dt=2.042881E-04
+ [ 05-05-2023  22:51:30.005 ] step: n=196 t=2.522981E-02 dt=2.047661E-04
+ [ 05-05-2023  22:51:30.055 ] step: n=197 t=2.543458E-02 dt=2.052424E-04
+ [ 05-05-2023  22:51:30.106 ] step: n=198 t=2.563982E-02 dt=2.057169E-04
+ [ 05-05-2023  22:51:30.154 ] step: n=199 t=2.584554E-02 dt=2.061897E-04
+ [ 05-05-2023  22:51:30.203 ] step: n=200 t=2.605172E-02 dt=2.066607E-04
+ [ 05-05-2023  22:51:30.253 ] step: n=201 t=2.625839E-02 dt=2.071300E-04
+ [ 05-05-2023  22:51:30.303 ] step: n=202 t=2.646552E-02 dt=2.075976E-04
+ [ 05-05-2023  22:51:30.354 ] step: n=203 t=2.667311E-02 dt=2.080636E-04
+ [ 05-05-2023  22:51:30.404 ] step: n=204 t=2.688118E-02 dt=2.085278E-04
+ [ 05-05-2023  22:51:30.455 ] step: n=205 t=2.708970E-02 dt=2.089905E-04
+ [ 05-05-2023  22:51:30.505 ] step: n=206 t=2.729869E-02 dt=2.094515E-04
+ [ 05-05-2023  22:51:30.557 ] step: n=207 t=2.750815E-02 dt=2.099108E-04
+ [ 05-05-2023  22:51:30.609 ] step: n=208 t=2.771806E-02 dt=2.103686E-04
+ [ 05-05-2023  22:51:30.660 ] step: n=209 t=2.792843E-02 dt=2.108248E-04
+ [ 05-05-2023  22:51:30.710 ] step: n=210 t=2.813925E-02 dt=2.112794E-04
+ [ 05-05-2023  22:51:30.760 ] step: n=211 t=2.835053E-02 dt=2.117325E-04
+ [ 05-05-2023  22:51:30.810 ] step: n=212 t=2.856226E-02 dt=2.121840E-04
+ [ 05-05-2023  22:51:30.860 ] step: n=213 t=2.877445E-02 dt=2.126339E-04
+ [ 05-05-2023  22:51:30.910 ] step: n=214 t=2.898708E-02 dt=2.130824E-04
+ [ 05-05-2023  22:51:30.960 ] step: n=215 t=2.920016E-02 dt=2.135293E-04
+ [ 05-05-2023  22:51:31.011 ] step: n=216 t=2.941369E-02 dt=2.139748E-04
+ [ 05-05-2023  22:51:31.062 ] step: n=217 t=2.962767E-02 dt=2.144188E-04
+ [ 05-05-2023  22:51:31.112 ] step: n=218 t=2.984209E-02 dt=2.148613E-04
+ [ 05-05-2023  22:51:31.162 ] step: n=219 t=3.005695E-02 dt=2.153023E-04
+ [ 05-05-2023  22:51:31.215 ] step: n=220 t=3.027225E-02 dt=2.157420E-04
+ [ 05-05-2023  22:51:31.266 ] step: n=221 t=3.048799E-02 dt=2.161801E-04
+ [ 05-05-2023  22:51:31.316 ] step: n=222 t=3.070417E-02 dt=2.166169E-04
+ [ 05-05-2023  22:51:31.367 ] step: n=223 t=3.092079E-02 dt=2.170523E-04
+ [ 05-05-2023  22:51:31.417 ] step: n=224 t=3.113784E-02 dt=2.174862E-04
+ [ 05-05-2023  22:51:31.468 ] step: n=225 t=3.135533E-02 dt=2.179188E-04
+ [ 05-05-2023  22:51:31.519 ] step: n=226 t=3.157325E-02 dt=2.183500E-04
+ [ 05-05-2023  22:51:31.569 ] step: n=227 t=3.179160E-02 dt=2.187799E-04
+ [ 05-05-2023  22:51:31.619 ] step: n=228 t=3.201038E-02 dt=2.192084E-04
+ [ 05-05-2023  22:51:31.670 ] step: n=229 t=3.222958E-02 dt=2.196355E-04
+ [ 05-05-2023  22:51:31.721 ] step: n=230 t=3.244922E-02 dt=2.200614E-04
+ [ 05-05-2023  22:51:31.771 ] step: n=231 t=3.266928E-02 dt=2.204859E-04
+ [ 05-05-2023  22:51:31.824 ] step: n=232 t=3.288977E-02 dt=2.209091E-04
+ [ 05-05-2023  22:51:31.875 ] step: n=233 t=3.311068E-02 dt=2.213310E-04
+ [ 05-05-2023  22:51:31.926 ] step: n=234 t=3.333201E-02 dt=2.217516E-04
+ [ 05-05-2023  22:51:31.977 ] step: n=235 t=3.355376E-02 dt=2.221709E-04
+ [ 05-05-2023  22:51:32.028 ] step: n=236 t=3.377593E-02 dt=2.225890E-04
+ [ 05-05-2023  22:51:32.078 ] step: n=237 t=3.399852E-02 dt=2.230058E-04
+ [ 05-05-2023  22:51:32.130 ] step: n=238 t=3.422152E-02 dt=2.234214E-04
+ [ 05-05-2023  22:51:32.182 ] step: n=239 t=3.444495E-02 dt=2.238357E-04
+ [ 05-05-2023  22:51:32.234 ] step: n=240 t=3.466878E-02 dt=2.242488E-04
+ [ 05-05-2023  22:51:32.284 ] step: n=241 t=3.489303E-02 dt=2.246607E-04
+ [ 05-05-2023  22:51:32.334 ] step: n=242 t=3.511769E-02 dt=2.250713E-04
+ [ 05-05-2023  22:51:32.385 ] step: n=243 t=3.534276E-02 dt=2.254808E-04
+ [ 05-05-2023  22:51:32.436 ] step: n=244 t=3.556824E-02 dt=2.258890E-04
+ [ 05-05-2023  22:51:32.487 ] step: n=245 t=3.579413E-02 dt=2.262961E-04
+ [ 05-05-2023  22:51:32.538 ] step: n=246 t=3.602043E-02 dt=2.267020E-04
+ [ 05-05-2023  22:51:32.590 ] step: n=247 t=3.624713E-02 dt=2.271067E-04
+ [ 05-05-2023  22:51:32.641 ] step: n=248 t=3.647424E-02 dt=2.275102E-04
+ [ 05-05-2023  22:51:32.692 ] step: n=249 t=3.670175E-02 dt=2.279127E-04
+ [ 05-05-2023  22:51:32.743 ] step: n=250 t=3.692966E-02 dt=2.283139E-04
+ [ 05-05-2023  22:51:32.793 ] step: n=251 t=3.715797E-02 dt=2.287140E-04
+ [ 05-05-2023  22:51:32.844 ] step: n=252 t=3.738669E-02 dt=2.291130E-04
+ [ 05-05-2023  22:51:32.894 ] step: n=253 t=3.761580E-02 dt=2.295109E-04
+ [ 05-05-2023  22:51:32.946 ] step: n=254 t=3.784531E-02 dt=2.299077E-04
+ [ 05-05-2023  22:51:32.996 ] step: n=255 t=3.807522E-02 dt=2.303034E-04
+ [ 05-05-2023  22:51:33.048 ] step: n=256 t=3.830552E-02 dt=2.306979E-04
+ [ 05-05-2023  22:51:33.099 ] step: n=257 t=3.853622E-02 dt=2.310914E-04
+ [ 05-05-2023  22:51:33.151 ] step: n=258 t=3.876731E-02 dt=2.314838E-04
+ [ 05-05-2023  22:51:33.202 ] step: n=259 t=3.899880E-02 dt=2.318751E-04
+ [ 05-05-2023  22:51:33.252 ] step: n=260 t=3.923067E-02 dt=2.322654E-04
+ [ 05-05-2023  22:51:33.302 ] step: n=261 t=3.946294E-02 dt=2.326545E-04
+ [ 05-05-2023  22:51:33.353 ] step: n=262 t=3.969559E-02 dt=2.330427E-04
+ [ 05-05-2023  22:51:33.404 ] step: n=263 t=3.992863E-02 dt=2.334298E-04
+ [ 05-05-2023  22:51:33.455 ] step: n=264 t=4.016206E-02 dt=2.338158E-04
+ [ 05-05-2023  22:51:33.508 ] step: n=265 t=4.039588E-02 dt=2.342008E-04
+ [ 05-05-2023  22:51:33.558 ] step: n=266 t=4.063008E-02 dt=2.345848E-04
+ [ 05-05-2023  22:51:33.610 ] step: n=267 t=4.086466E-02 dt=2.349678E-04
+ [ 05-05-2023  22:51:33.660 ] step: n=268 t=4.109963E-02 dt=2.353498E-04
+ [ 05-05-2023  22:51:33.713 ] step: n=269 t=4.133498E-02 dt=2.357308E-04
+ [ 05-05-2023  22:51:33.764 ] step: n=270 t=4.157071E-02 dt=2.361107E-04
+ [ 05-05-2023  22:51:33.816 ] step: n=271 t=4.180682E-02 dt=2.364897E-04
+ [ 05-05-2023  22:51:33.866 ] step: n=272 t=4.204331E-02 dt=2.368677E-04
+ [ 05-05-2023  22:51:33.917 ] step: n=273 t=4.228018E-02 dt=2.372447E-04
+ [ 05-05-2023  22:51:33.968 ] step: n=274 t=4.251743E-02 dt=2.376207E-04
+ [ 05-05-2023  22:51:34.018 ] step: n=275 t=4.275505E-02 dt=2.379958E-04
+ [ 05-05-2023  22:51:34.069 ] step: n=276 t=4.299304E-02 dt=2.383699E-04
+ [ 05-05-2023  22:51:34.120 ] step: n=277 t=4.323141E-02 dt=2.387431E-04
+ [ 05-05-2023  22:51:34.171 ] step: n=278 t=4.347016E-02 dt=2.391153E-04
+ [ 05-05-2023  22:51:34.222 ] step: n=279 t=4.370927E-02 dt=2.394865E-04
+ [ 05-05-2023  22:51:34.274 ] step: n=280 t=4.394876E-02 dt=2.398569E-04
+ [ 05-05-2023  22:51:34.325 ] step: n=281 t=4.418861E-02 dt=2.402263E-04
+ [ 05-05-2023  22:51:34.376 ] step: n=282 t=4.442884E-02 dt=2.405947E-04
+ [ 05-05-2023  22:51:34.426 ] step: n=283 t=4.466943E-02 dt=2.409623E-04
+ [ 05-05-2023  22:51:34.477 ] step: n=284 t=4.491040E-02 dt=2.413289E-04
+ [ 05-05-2023  22:51:34.528 ] step: n=285 t=4.515173E-02 dt=2.416947E-04
+ [ 05-05-2023  22:51:34.578 ] step: n=286 t=4.539342E-02 dt=2.420595E-04
+ [ 05-05-2023  22:51:34.630 ] step: n=287 t=4.563548E-02 dt=2.424234E-04
+ [ 05-05-2023  22:51:34.680 ] step: n=288 t=4.587790E-02 dt=2.427865E-04
+ [ 05-05-2023  22:51:34.732 ] step: n=289 t=4.612069E-02 dt=2.431486E-04
+ [ 05-05-2023  22:51:34.792 ] step: n=290 t=4.636384E-02 dt=2.435099E-04
+ [ 05-05-2023  22:51:34.841 ] step: n=291 t=4.660735E-02 dt=2.438703E-04
+ [ 05-05-2023  22:51:34.891 ] step: n=292 t=4.685122E-02 dt=2.442298E-04
+ [ 05-05-2023  22:51:34.944 ] step: n=293 t=4.709545E-02 dt=2.445885E-04
+ [ 05-05-2023  22:51:34.994 ] step: n=294 t=4.734004E-02 dt=2.449463E-04
+ [ 05-05-2023  22:51:35.045 ] step: n=295 t=4.758498E-02 dt=2.453033E-04
+ [ 05-05-2023  22:51:35.095 ] step: n=296 t=4.783029E-02 dt=2.456594E-04
+ [ 05-05-2023  22:51:35.146 ] step: n=297 t=4.807595E-02 dt=2.460146E-04
+ [ 05-05-2023  22:51:35.196 ] step: n=298 t=4.832196E-02 dt=2.463691E-04
+ [ 05-05-2023  22:51:35.248 ] step: n=299 t=4.856833E-02 dt=2.467227E-04
+ [ 05-05-2023  22:51:35.300 ] step: n=300 t=4.881505E-02 dt=2.470754E-04
+ [ 05-05-2023  22:51:35.351 ] step: n=301 t=4.906213E-02 dt=2.474273E-04
+ [ 05-05-2023  22:51:35.402 ] step: n=302 t=4.930956E-02 dt=2.477785E-04
+ [ 05-05-2023  22:51:35.453 ] step: n=303 t=4.955733E-02 dt=2.481288E-04
+ [ 05-05-2023  22:51:35.504 ] step: n=304 t=4.980546E-02 dt=2.484783E-04
+ [ 05-05-2023  22:51:35.555 ] [Driver_evolveAll]: Exiting evolution loop
+ [ 05-05-2023  22:51:35.568 ] [IO_writeCheckpoint] open: type=checkpoint name=flashx_hdf5_chk_0001
+ [ 05-05-2023  22:51:35.679 ] [IO_writeCheckpoint] close: type=checkpoint name=flashx_hdf5_chk_0001
+ [ 05-05-2023  22:51:35.691 ] [IO_writePlotfile] open: type=plotfile name=flashx_forced_hdf5_plt_cnt_0000
+ [ 05-05-2023  22:51:35.735 ] [IO_writePlotfile] close: type=plotfile name=flashx_forced_hdf5_plt_cnt_0000
+ [ 05-05-2023  22:51:35.739 ] memory: /proc vsize    (MB):      122.30 (min)        131.02 (max)        124.48 (avg)
+ [ 05-05-2023  22:51:35.743 ] memory: /proc rss      (MB):       51.59 (min)         56.84 (max)         52.99 (avg)
+ ==============================================================================
+ perf_summary: code performance summary for process            0
+                      beginning : 05-05-2023  22:51:19
+                         ending : 05-05-2023  22:51:35
+   seconds in monitoring period :               16.610
+      number of evolution steps :                  304
+ ------------------------------------------------------------------------------
+ accounting unit                       time sec  num calls   secs avg  time pct
+ ------------------------------------------------------------------------------
+ initialization                          1.028      1           1.028     6.187
+  readProfile                            0.033      1           0.033     0.196
+  writeCheckpoint                        0.113      1           0.113     0.680
+  writePlotfile                          0.047      1           0.047     0.280
+ writeCheckpoint                         0.119      1           0.119     0.717
+ writePlotfile                           0.050      1           0.050     0.303
+ evolution                              15.386      1          15.386    92.627
+  Hydro                                 10.952    304           0.036    65.937
+   compute fluxes                        5.182    304           0.017    31.200
+   update solution                       2.453    304           0.008    14.769
+  sourceTerms                            0.000    304           0.000     0.001
+  Particles_advance                      0.000    304           0.000     0.001
+  Gravity potential                      0.000    304           0.000     0.000
+  IO_output                              1.908    608           0.003    11.487
+   diagnostics                           1.893    608           0.003    11.398
+  Grid_updateRefinement                  0.000    304           0.000     0.001
+  Driver_computeDt                       1.274    304           0.004     7.671
+ ==============================================================================
+ ==============================================================================
+ perf_summary: code performance summary statistics
+                      beginning : 05-05-2023  22:51:19
+                         ending : 05-05-2023  22:51:35
+   seconds in monitoring period :               16.610
+      number of evolution steps :                  304
+ ------------------------------------------------------------------------------
+ accounting unit                  max/proc (s)  min/proc (s) avg/proc (s)   num calls
+ ------------------------------------------------------------------------------
+ initialization                          1.028         1.021        1.022           1
+  readProfile                            0.033         0.022        0.029           1
+  writeCheckpoint                        0.113         0.043        0.060           1
+  writePlotfile                          0.047         0.035        0.038           1
+ writeCheckpoint                         0.119         0.042        0.061           1
+ writePlotfile                           0.050         0.037        0.040           1
+ evolution                              15.397        15.386       15.394           1
+  Hydro                                 12.056        10.952       11.580         304
+   compute fluxes                        5.182         5.054        5.146         304
+   update solution                       2.498         2.430        2.467         304
+  sourceTerms                            0.000         0.000        0.000         304
+  Particles_advance                      0.000         0.000        0.000         304
+  Gravity potential                      0.000         0.000        0.000         304
+  IO_output                              2.855         1.908        2.231         608
+   diagnostics                           1.893         0.621        0.946         608
+  Grid_updateRefinement                  0.000         0.000        0.000         304
+  Driver_computeDt                       1.274         1.266        1.268         304
+ ==============================================================================
+ [ 05-05-2023  22:51:35.757 ] LOGFILE_END: FLASH run complete.
